@@ -1,4 +1,4 @@
-# Efficient Text Detection in Complex Floor Plan Images with YOLOv11-OBB: C3-CAT and C3-DAT Modules Approach
+# YOLOv11-CFPI: Efficient Text Detection in Complex Floor Plan Images
 
 Text information detector for complex diagram images
 
