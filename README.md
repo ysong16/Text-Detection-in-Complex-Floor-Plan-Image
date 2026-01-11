@@ -3,7 +3,7 @@
 ![image](https://github.com/ysong16/Text-Detection-in-Complex-Floor-Plan-Image/blob/55ec4899e6b58ce1b8df3f272245b0bb1d41c6ac/datasets/yourself_datasets/complex%20floor%20plan%20image.jpg)
 ## Description
 
-Our proposed model aims to address the challenges of detecting text in complex diagram images, such as small font sizes, extreme aspect ratios and cluttered backgrounds.
+Our proposed model aims to address the challenges of detecting text in complex diagram images, such as small font size, extreme aspect ratio and cluttered background.
 
 ## Getting Started
 
