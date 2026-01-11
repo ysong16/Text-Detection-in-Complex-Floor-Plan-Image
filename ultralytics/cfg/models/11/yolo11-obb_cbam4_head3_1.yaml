@@ -34,22 +34,22 @@ backbone:
 # YOLO11n head
 head:
   - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
-  - [[-1, 6], 1, Concat, [1]]           # 11
-  - [-1, 2, C3k2, [512, False]]         # 12
+  - [[-1, 6], 1, Concat, [1]] # 11
+  - [-1, 2, C3k2, [512, False]] # 12
 
-  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]  # 14
-  - [[-1, 4], 1, Concat, [1]]           # 15 (cat P3)
-  - [-1, 2, C3k2, [256, False]]         # 16
-  - [-1, 1, DATBlock, [256]]            # 13 ← 新增 DAT
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]] # 14
+  - [[-1, 4], 1, Concat, [1]] # 15 (cat P3)
+  - [-1, 2, C3k2, [256, False]] # 16
+  - [-1, 1, DATBlock, [256]] # 13 ← 新增 DAT
 
-  - [16, 1, Conv, [256, 3, 2]]          # 17
-  - [[-1, 13], 1, Concat, [1]]          # 18 ← 注意！这里原来是14，现在应改为13（因为我们要连接 DAT 输出）
-  - [-1, 2, C3k2, [512, False]]         # 19
+  - [16, 1, Conv, [256, 3, 2]] # 17
+  - [[-1, 13], 1, Concat, [1]] # 18 ← 注意！这里原来是14，现在应改为13（因为我们要连接 DAT 输出）
+  - [-1, 2, C3k2, [512, False]] # 19
 
-  - [-1, 1, Conv, [512, 3, 2]]          # 20
-  - [[-1, 10], 1, Concat, [1]]          # 21 (cat from backbone layer 11)
-  - [-1, 2, C3k2, [1024, True]]         # 22
+  - [-1, 1, Conv, [512, 3, 2]] # 20
+  - [[-1, 10], 1, Concat, [1]] # 21 (cat from backbone layer 11)
+  - [-1, 2, C3k2, [1024, True]] # 22
 
   # - [16, 1, SimpleDeformTransEncoder, [256]]  # 23 (was 24)
 
-  - [[17, 20, 23], 1, OBB, [nc, 1]]     # 24 ← Detect using new indices
+  - [[17, 20, 23], 1, OBB, [nc, 1]] # 24 ← Detect using new indices
