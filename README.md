@@ -16,9 +16,9 @@ pip install ultralytics
 
 ### Datasets
 
-Please download the dataset from the link:
+Please download the dataset folder (yourself_datasets) from the link:
 
-https://drive.google.com/drive/folders/166_d8394JWBGeT7bUbuWGfLB7mqf9L1r?usp=drive_link
+https://drive.google.com/drive/folders/1ELDAV9c6mB4gsqtWE0HF41qAwez7thzJ?usp=share_link
 
 ### Executing program
 
