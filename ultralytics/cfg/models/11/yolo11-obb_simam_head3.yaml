@@ -47,7 +47,7 @@ head:
   - [-1, 1, Conv, [512, 3, 2]]
   - [[-1, 10], 1, Concat, [1]] # cat head P5
   - [-1, 2, C3k2, [1024, True]] # 23 (P5/32-large)
-  
+
   - [23, 1, SimpleDeformTransEncoder, [1024]]
 
   - [[17, 20, 24], 1, OBB, [nc, 1]] # Detect(P3, P4, P5) # 层数改变，此处需要进行相应修改
