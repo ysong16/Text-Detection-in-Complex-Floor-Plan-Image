@@ -1,6 +1,6 @@
 # YOLOv11-CFPI: Efficient Text Detection in Complex Floor Plan Images
 
-
+![image](datasets/yourself_datasets/complex floor plan image.jpg)
 ## Description
 
 Our proposed model aims to address the challenges of detecting text in complex diagram images, such as small font sizes, extreme aspect ratios and cluttered backgrounds.
