@@ -1,6 +1,5 @@
 # YOLOv11-CFPI: Efficient Text Detection in Complex Floor Plan Images
 
-Text information detector for complex diagram images
 
 ## Description
 
