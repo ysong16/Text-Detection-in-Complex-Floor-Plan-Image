@@ -25,7 +25,7 @@ Download yolo11s-obb.pt from the link: https://docs.ultralytics.com/tasks/obb/#m
 
 Train:
 ```
-yolo obb train data=./datasets/yourself_datasets/yourself_datasets.yaml model=yolo11s-obb.pt epochs=1000
+yolo obb train data=./datasets/yourself_datasets/yourself_datasets.yaml model=yolo11s-obb.pt
 ```
 Test:
 ```
