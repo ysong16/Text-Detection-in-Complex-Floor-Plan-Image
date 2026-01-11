@@ -35,4 +35,4 @@ python evaluate_obb.py --model runs/obb/train/weights/best.pt --data datasets/yo
 
 ## Authors
 
-By Yuhang Song, Li Cheng, and Mrinal Mandal
+By Song Yuhang, Cheng Li, and Mandal Mrinal
