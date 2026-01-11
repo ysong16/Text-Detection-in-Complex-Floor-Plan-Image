@@ -4,7 +4,7 @@
 # def load_model(model_path):
 #     """
 #     加载YOLO模型。
-    
+
 #     :param model_path: 模型权重文件路径，例如 'yolov11n.pt'
 #     :return: 加载的YOLO模型实例
 #     """
@@ -14,13 +14,13 @@
 # def detect_and_draw(image_path, model):
 #     """
 #     使用YOLO模型检测图片中的对象，并绘制边界框（不包含标签）。
-    
+
 #     :param image_path: 输入图片的路径
 #     :param model: 已加载的YOLO模型
 #     """
 #     # 执行预测
 #     results = model(image_path)
-    
+
 #     # 读取原始图片用于绘图
 #     img = cv2.imread(image_path)
 #     print(results)
@@ -32,7 +32,7 @@
 #             # 绘制边界框
 #             r = box.xyxy
 #             cv2.rectangle(img, (int(r[0]), int(r[1])), (int(r[2]), int(r[3])), (0, 255, 0), 2)
-            
+
 #     # 显示最终图像
 #     # cv2.imshow('Detected Objects', img)
 #     cv2.imwrite("detect_result.jpg", img)
@@ -44,16 +44,17 @@
 #     model_path = './runs/obb/train51/weights/best.pt'  # 根据实际情况调整模型路径
 #     # model_path = './yolo11n.pt'  # 根据实际情况调整模型路径
 #     image_path = './datasets/yourself_datasets/images/test/110-06(test).jpg'  # 替换为你的图片路径
-    
+
 #     # 加载模型
 #     model = load_model(model_path)
 #     print(model)
 #     # 进行检测并绘制结果
 #     detect_and_draw(image_path, model)
 
-from ultralytics import YOLO
 import cv2
 import numpy as np
+
+from ultralytics import YOLO
 
 # 加载模型
 model = YOLO(r"./runs/obb/train60/weights/best.pt")
@@ -63,7 +64,7 @@ results = model.predict(
     r"./datasets/yourself_datasets/images/test/15-07(test).jpg",
     imgsz=1024,
     conf=0.5,
-    save=False  # 我们自己保存
+    save=False,  # 我们自己保存
 )
 
 # 读取图像
@@ -97,4 +98,4 @@ for result in results:
             #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, COLOR, 2)
 
 # 保存图像
-cv2.imwrite('obb_result_custom_color.jpg', im)
+cv2.imwrite("obb_result_custom_color.jpg", im)
